@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b321wl2bth3bq"]
+
+[ext_resource type="PackedScene" uid="uid://bcqmasf81enlv" path="res://player/player.tscn" id="1_tmuha"]
+[ext_resource type="Script" uid="uid://ckxhy4g3dt82d" path="res://scenes/spawner.gd" id="2_i7b8v"]
+[ext_resource type="PackedScene" uid="uid://bhmhqe0pbej0u" path="res://player/enemy/fireflys.tscn" id="3_p05b1"]
+
+[node name="Work" type="Node" unique_id=1494095017]
+
+[node name="Container" type="Container" parent="." unique_id=1033127567]
+offset_right = 290.0
+offset_bottom = 70.0
+
+[node name="Player" parent="." unique_id=1542860234 instance=ExtResource("1_tmuha")]
+position = Vector2(529, 308)
+
+[node name="spawner" type="Node2D" parent="." unique_id=1006115030]
+script = ExtResource("2_i7b8v")
+object_scene = ExtResource("3_p05b1")
