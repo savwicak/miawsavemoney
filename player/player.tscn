@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bcqmasf81enlv"]
 
 [ext_resource type="Script" uid="uid://cp6vmeai5gyh6" path="res://script/player.gd" id="1_rkbax"]
-[ext_resource type="Texture2D" uid="uid://ctdk6vsda72gg" path="res://assets/images/Group 45 (1).png" id="2_g1dw6"]
-[ext_resource type="Texture2D" uid="uid://bqe3o5rst6itl" path="res://assets/images/Group 81.png" id="3_yw30f"]
+[ext_resource type="Texture2D" uid="uid://ctdk6vsda72gg" path="res://assets/images/player.png" id="2_g1dw6"]
+[ext_resource type="Texture2D" uid="uid://bqe3o5rst6itl" path="res://assets/images/net.png" id="3_yw30f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
 radius = 366.46634

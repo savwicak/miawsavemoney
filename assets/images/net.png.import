@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctdk6vsda72gg"
-path="res://.godot/imported/Group 45 (1).png-e36883521f3c0bdd9d84e97a4a010ced.ctex"
+uid="uid://bqe3o5rst6itl"
+path="res://.godot/imported/net.png-6209e85f9d4e078dc9e04b0b3060dd8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/Group 45 (1).png"
-dest_files=["res://.godot/imported/Group 45 (1).png-e36883521f3c0bdd9d84e97a4a010ced.ctex"]
+source_file="res://assets/images/net.png"
+dest_files=["res://.godot/imported/net.png-6209e85f9d4e078dc9e04b0b3060dd8b.ctex"]
 
 [params]
 
