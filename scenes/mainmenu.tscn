@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bj2t2df2ylu75"]
 
+[ext_resource type="Texture2D" uid="uid://jostnohh7jr8" path="res://assets/images/Bg/menuScreen.svg" id="1_5mbse"]
+
 [node name="mainmenu" type="Control" unique_id=408135684]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="MenuScreen" type="Sprite2D" parent="." unique_id=47526316]
+position = Vector2(569, 321)
+texture = ExtResource("1_5mbse")
