@@ -1,20 +1,24 @@
 [gd_scene format=3 uid="uid://bhmhqe0pbej0u"]
 
-[ext_resource type="Texture2D" uid="uid://dr3mt72efqsqk" path="res://icon.svg" id="1_6ldtp"]
 [ext_resource type="Script" uid="uid://b88sjdir1v116" path="res://script/fireflys.gd" id="1_075tv"]
+[ext_resource type="Texture2D" uid="uid://0mkj70m16yi3" path="res://assets/images/fireflies.png" id="2_075tv"]
+[ext_resource type="Script" uid="uid://csll3tgad6578" path="res://player/enemy/area_2d.gd" id="2_tcyv4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_075tv"]
-size = Vector2(51.5, 51)
+[sub_resource type="CircleShape2D" id="CircleShape2D_tcyv4"]
+radius = 16.964266
 
-[node name="fireflys" type="CharacterBody2D" unique_id=387260084]
+[node name="fireflys" type="CharacterBody2D" unique_id=1144841665]
 script = ExtResource("1_075tv")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1701322753]
-position = Vector2(-0.5, -1.5)
-scale = Vector2(0.11593765, 0.11593765)
-texture = ExtResource("1_6ldtp")
+[node name="Area2D" type="Area2D" parent="." unique_id=1810543458]
+script = ExtResource("2_tcyv4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=59385056]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=59385056]
 position = Vector2(-0.75, -2)
 scale = Vector2(0.28000033, 0.28000033)
-shape = SubResource("RectangleShape2D_075tv")
+shape = SubResource("CircleShape2D_tcyv4")
+
+[node name="Icon" type="Sprite2D" parent="Area2D" unique_id=1701322753]
+position = Vector2(-0.5, -1.5)
+scale = Vector2(0.11593765, 0.11593765)
+texture = ExtResource("2_075tv")

@@ -9,6 +9,14 @@ var can_slash: bool = true
 @export var sword_return_time: float = 0.5
 @export var weapon_damage: float = 1.0
 
+@onready var firefly_label = $"../CanvasLayer/FireflyCounter"
+
+var fireflies_caught := 0
+var is_slashing := false
+
+func _ready() -> void:
+	add_to_group("player")
+
 func _physics_process(delta: float) -> void:
 	# =========================
 	# MOVEMENT
@@ -48,8 +56,8 @@ func _physics_process(delta: float) -> void:
 	# =========================
 	if Input.is_action_just_pressed("attack") and can_slash:
 		can_slash = false
+		is_slashing = true
 
-		# Atur kecepatan animasi agar durasinya = slash_time
 		var anim_player = $icon/net/AnimationPlayer
 		var anim = anim_player.get_animation("slash")
 
@@ -58,15 +66,26 @@ func _physics_process(delta: float) -> void:
 
 		anim_player.play("slash")
 
+func _on_catch_area_area_entered(area: Area2D) -> void:
+	if is_slashing and area.has_method("catch_firefly"):
+		area.catch_firefly()
+
+		fireflies_caught += 1
+
+		firefly_label.text = "Fireflies: " + str(fireflies_caught)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "slash":
+		is_slashing = false
+
+		$icon/net/AnimationPlayer.speed_scale = $icon/net/AnimationPlayer.get_animation("net_return").length / sword_return_time
+
+		$icon/net/AnimationPlayer.play("net_return")
+	else:
+		can_slash = true
+		
 
 # Dipanggil di akhir animasi slash melalui Call Method Track
 func end_slash() -> void:
 	await get_tree().create_timer(sword_return_time).timeout
 	can_slash = true
-
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
-	if anim_name == "slash":
-		$icon/net/AnimationPlayer.speed_scale = $icon/net/AnimationPlayer.get_animation("net_return").length / sword_return_time
-		$icon/net/AnimationPlayer.play("net_return")
-	else:
-		can_slash = true

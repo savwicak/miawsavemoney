@@ -5,8 +5,8 @@ extends Node2D
 @export var max_objects: int = 20
 
 # Area spawn random
-@export var min_position: Vector2 = Vector2(-400, -200)
-@export var max_position: Vector2 = Vector2(400, 200)
+@export var min_position: Vector2 = Vector2(-800, -400)
+@export var max_position: Vector2 = Vector2(800, 400)
 
 func _ready():
 	randomize()

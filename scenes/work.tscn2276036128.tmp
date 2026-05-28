@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://bcqmasf81enlv" path="res://player/player.tscn" id="1_tmuha"]
 [ext_resource type="Script" uid="uid://ckxhy4g3dt82d" path="res://scenes/spawner.gd" id="2_i7b8v"]
 [ext_resource type="PackedScene" uid="uid://bhmhqe0pbej0u" path="res://player/enemy/fireflys.tscn" id="3_p05b1"]
-[ext_resource type="PackedScene" uid="uid://c6veyeqxh6tht" path="res://scenes/props/portal.tscn" id="4_p05b1"]
 
 [node name="Work" type="Node" unique_id=1494095017]
 
@@ -22,6 +21,3 @@ offset_bottom = 23.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 text = "Fireflies: 0"
-
-[node name="Portal" parent="." unique_id=519141242 instance=ExtResource("4_p05b1")]
-position = Vector2(39, 575)

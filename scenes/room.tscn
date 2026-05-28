@@ -9,7 +9,6 @@
 script = ExtResource("1_14vil")
 
 [node name="Bedroom1" type="Sprite2D" parent="." unique_id=2137655958]
-visible = false
 position = Vector2(578.00006, 363)
 scale = Vector2(0.1299709, 0.1299709)
 texture = ExtResource("2_jxe34")
@@ -21,6 +20,7 @@ scale = Vector2(0.1268266, 0.12682658)
 texture = ExtResource("3_jn645")
 
 [node name="Bedroom3" type="Sprite2D" parent="." unique_id=886987357]
+visible = false
 position = Vector2(570.8636, 296.875)
 scale = Vector2(0.1283764, 0.12837638)
 texture = ExtResource("4_qvc4m")

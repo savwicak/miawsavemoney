@@ -208,7 +208,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
 radius = 112.508575
 
-[node name="Player" type="CharacterBody2D" unique_id=984030667]
+[node name="Player" type="CharacterBody2D" unique_id=1714090530]
 script = ExtResource("1_rkbax")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1030988360]
