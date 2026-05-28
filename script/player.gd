@@ -39,10 +39,9 @@ func _physics_process(delta: float) -> void:
 	# =========================
 	if get_global_mouse_position().y > global_position.y:
 		$icon/net.show_behind_parent = false
-		$icon.frame = 1
 	else:
 		$icon/net.show_behind_parent = true
-		$icon.frame = 0
+
 
 	# =========================
 	# ATTACK

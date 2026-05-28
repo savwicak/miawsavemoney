@@ -1,3 +1,26 @@
 [gd_scene format=3 uid="uid://vmpxn7agp"]
 
+[ext_resource type="Script" uid="uid://d3lc6t6m36uhq" path="res://scenes/room.gd" id="1_14vil"]
+[ext_resource type="Texture2D" uid="uid://bm70qm84nww0" path="res://assets/images/bedroom/bedroom 1.png" id="2_jxe34"]
+[ext_resource type="Texture2D" uid="uid://hyhk0fmn3x4f" path="res://assets/images/bedroom/bedroom 2.png" id="3_jn645"]
+[ext_resource type="Texture2D" uid="uid://bmvcysyrv6vvg" path="res://assets/images/bedroom/bedroom 3.png" id="4_qvc4m"]
+
 [node name="room" type="Node" unique_id=15860950]
+script = ExtResource("1_14vil")
+
+[node name="Bedroom1" type="Sprite2D" parent="." unique_id=2137655958]
+visible = false
+position = Vector2(578.00006, 363)
+scale = Vector2(0.1299709, 0.1299709)
+texture = ExtResource("2_jxe34")
+
+[node name="Bedroom2" type="Sprite2D" parent="." unique_id=640542206]
+visible = false
+position = Vector2(577.9549, 230.00003)
+scale = Vector2(0.1268266, 0.12682658)
+texture = ExtResource("3_jn645")
+
+[node name="Bedroom3" type="Sprite2D" parent="." unique_id=886987357]
+position = Vector2(570.8636, 296.875)
+scale = Vector2(0.1283764, 0.12837638)
+texture = ExtResource("4_qvc4m")

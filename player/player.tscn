@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bqe3o5rst6itl" path="res://assets/images/net.png" id="3_yw30f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g1dw6"]
-radius = 366.46634
+radius = 374.20264
 
 [sub_resource type="Animation" id="Animation_g6k8r"]
 length = 0.001
@@ -206,10 +206,12 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rkbax"]
-radius = 100.02
+radius = 112.508575
 
 [node name="Player" type="CharacterBody2D" unique_id=1714090530]
 script = ExtResource("1_rkbax")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1030988360]
 
 [node name="icon" type="Sprite2D" parent="." unique_id=1609050690]
 position = Vector2(-2.0000076, 0)
@@ -225,20 +227,23 @@ texture = ExtResource("3_yw30f")
 offset = Vector2(775.9513, -700.8987)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="icon/net" unique_id=393791751]
-position = Vector2(368.38904, -1079.3977)
+position = Vector2(796.24384, -1102.1703)
+rotation = -0.93606687
+scale = Vector2(1.3399109, -0.5110074)
 shape = SubResource("CircleShape2D_g1dw6")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="icon/net" unique_id=1654450055]
+position = Vector2(-6.1035156e-05, -6.1035156e-05)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="icon/net" unique_id=1086585889]
 libraries/ = SubResource("AnimationLibrary_hg6s5")
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="icon/net" unique_id=1654450055]
 
 [node name="flip_anim" type="AnimationPlayer" parent="icon" unique_id=1781340083]
 libraries/ = SubResource("AnimationLibrary_yllr7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1780104494]
-position = Vector2(0, -4)
-scale = Vector2(0.4000001, 0.7192379)
+position = Vector2(-16, 0)
+scale = Vector2(0.45795557, 0.4967186)
 shape = SubResource("CircleShape2D_rkbax")
 
 [connection signal="animation_finished" from="icon/net/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

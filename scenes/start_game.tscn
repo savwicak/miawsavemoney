@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bbs4ofeu7cknr"]
+
+[ext_resource type="Script" uid="uid://cerdr2ralxo62" path="res://script/start_game.gd" id="1_wcjs8"]
+[ext_resource type="Texture2D" uid="uid://dg7sw1xnh2mer" path="res://assets/images/Bg/Start.svg" id="2_qr1nj"]
+[ext_resource type="Texture2D" uid="uid://lllk0t55po81" path="res://assets/images/Bg/MiawTitle.png" id="3_mc8qq"]
+[ext_resource type="Texture2D" uid="uid://bicrtam5knkh3" path="res://assets/Buttons/lesgoBtn.png" id="4_7xi32"]
+[ext_resource type="Script" uid="uid://vvsjoq8egu15" path="res://scenes/gameTitle.gd" id="4_qr1nj"]
+
+[node name="StartGame" type="Node2D" unique_id=1352794081]
+script = ExtResource("1_wcjs8")
+
+[node name="Start" type="Sprite2D" parent="." unique_id=1703585627]
+position = Vector2(576, 323)
+texture = ExtResource("2_qr1nj")
+
+[node name="gameTitle" type="Sprite2D" parent="." unique_id=1495191876]
+position = Vector2(577, 245)
+texture = ExtResource("3_mc8qq")
+script = ExtResource("4_qr1nj")
+
+[node name="Button" type="Button" parent="." unique_id=1779813943]
+offset_left = 377.0
+offset_top = 420.0
+offset_right = 781.0
+offset_bottom = 529.0
+icon = ExtResource("4_7xi32")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
